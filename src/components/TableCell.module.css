@@ -1,0 +1,41 @@
+.cell {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cell_head {
+  border-left: 1px solid #072346;
+  border-right: 1px solid #072346;
+}
+.cell p {
+  margin: 8px;
+}
+
+.cell_head p {
+  height: 100%;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cell_row p {
+  color: #e6e9ec;
+  font-size: 0.7rem;
+
+}
+
+@media only screen and (min-width: 724px) {
+  .cell_head p {
+    font-size: 1rem;
+  }
+  .cell_row p {
+    color: #e6e9ec;
+    font-size: 0.9rem;
+  
+  }
+  
+}
+
+@media only screen and (min-width: 1020px) {
+}
