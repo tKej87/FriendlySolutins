@@ -7,8 +7,6 @@ import styles from "./TableRow.module.css";
 const TableRow: FC<{ values: ServerData; columnsQuantity: number; columnsName: string[] }> = (
   props
 ) => {
-  console.log(props.values);
-
   const displayedContent = props.columnsName.map((el) => {
     const keyName =
       el === "WO ID"
@@ -19,7 +17,7 @@ const TableRow: FC<{ values: ServerData; columnsQuantity: number; columnsName: s
         ? props.values.assigned_to.map((el) => el.person_name).join(" ")
         : props.values[keyName];
 
-    return <TableCell type="row" cellsQuantity={props.columnsQuantity} text={name} />;
+    return <TableCell key={name} type="row" cellsQuantity={props.columnsQuantity} text={name} />;
   });
 
   return <div className={styles["row"]}>{displayedContent}</div>;
